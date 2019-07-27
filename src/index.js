@@ -1,11 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
 
-let arr = ['first', 'second', 'third', 'fourth', 'fifth'];
+const history = createHistory();
 
-let RList = (props) => {
-    let list = props.data.map((value, index) => <li key={index}>{value}</li>);
-    return(<ol>{list}</ol>);
-}
+const First = () => (
+    <div>
+        <h2>first component</h2>
+    </div>
+);
 
-ReactDOM.render(<RList data={arr}/>, document.getElementById("div1"));
+const First = () => (
+    <div>
+        <h2>first component</h2>
+    </div>
+);
+
+const First = () => (
+    <div>
+        <h2>first component</h2>
+    </div>
+);
+
+
+
+ReactDOM.render(<RList data={arr} />, document.getElementById("div1"));
