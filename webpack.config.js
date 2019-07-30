@@ -24,6 +24,7 @@ module.exports = {
     ],
     mode: "development",
     devServer: {
-        open: true
+        open: true,
+		historyApiFallback: true
     }
 };
