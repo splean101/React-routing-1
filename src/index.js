@@ -1,24 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-const First = () => (<div><h2>First component</h2></div>);
-const Second = () => (<div><h2>Second component</h2></div>);
-const Third = () => (<div><h2>Third component</h2></div>);
+const First = () => (
+    <div>
+        <h2>First component</h2>
+        <Router>
+            <Link to='/second'>second</Link>
+        </Router>
+    </div>
+);
+const Second = () => (
+    <div>
+        <h2>Second component</h2>
+        <Router>
+            <Link to='/third'>third</Link>
+        </Router>
+    </div>
+);
+const Third = () => (
+    <div>
+        <h2>Third component</h2>
+        <Router>
+            <Link to='/first'>first</Link>
+        </Router>
+    </div>
+);
 
 const Navigation = () => {
-    return <Router>
-        <div>
-            <ul>
-                <li> <NavLink to='/first'>first</NavLink></li>
-                <li> <NavLink to='/second'>second</NavLink></li>
-                <li> <NavLink to='/third'>third</NavLink></li>
-            </ul>
-            <Route exact path='/first' component={Second}></Route>
-            <Route exact path='/second' component={Third}></Route>
-            <Route exact path='/third' component={First}></Route>
-        </div>
-    </Router>
-}
+    return (<Router>
+        <Route exact path='/' component={First}></Route>
+        <Route exact path='/first' component={First}></Route>
+        <Route exact path='/second' component={Second}></Route>
+        <Route exact path='/third' component={Third}></Route>
+    </Router>);
+};
 
 ReactDOM.render(<Navigation />, document.getElementById("div1"));
