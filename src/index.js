@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
-
-const history = createHistory();
 
 const First = () => (<div><h2>First component</h2></div>);
 const Second = () => (<div><h2>Second component</h2></div>);
