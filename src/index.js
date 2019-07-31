@@ -29,10 +29,10 @@ const Third = () => (
 
 const Navigation = () => {
     return (<Router>
-        <Route exact path='/' component={First}></Route>
-        <Route exact path='/first' component={First}></Route>
-        <Route exact path='/second' component={Second}></Route>
-        <Route exact path='/third' component={Third}></Route>
+        <Route exact path='/' component={First} />
+        <Route exact path='/first' component={First} />
+        <Route exact path='/second' component={Second} />
+        <Route exact path='/third' component={Third} />
     </Router>);
 };
 
